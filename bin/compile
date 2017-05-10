@@ -86,8 +86,8 @@ fi
     status "Installing dependencies and devDependencies from package.json"
     NODE_ENV=development npm install --userconfig $build_dir/.npmrc 2>&1 | indent
   else
-    status "Installing dependencies from package.json"
-    npm install --userconfig $build_dir/.npmrc --production 2>&1 | indent
+    status "Installing dependencies and devDependencies from package.json"
+    NODE_ENV=development npm install --userconfig $build_dir/.npmrc 2>&1 | indent
   fi
 )
 
